@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Hind", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            margin-left: 150px;
+            font-size: 1.7em;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-items {
+            display: inline-flex;
+            gap: 40px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .nav-items img {
+            margin-right: 100px;
+        }
+        
+        .agenda {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 21px;
+            margin: 0;
+            margin-left: 750px;
+            margin-right: 50px;
+            margin-top: 200px;
+            text-align: justify;
+        }
+        
+        .colab, .RTP {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 23px;
+            padding: 70px 150px;
+            text-align: center;
+            background-image: url('backg.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .PR {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 25px;
+            margin-left: 120px;
+            margin-top: 200px;
+            text-align: left;
+            color: green;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .PR-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .PR-icons i {
+            font-size: 25px;
+            color: green;
+        }
+
+        .SR {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 20px;
+            margin-right: 900px;
+            margin-left: 140px;
+            margin-bottom: 300px;
+            text-align: left;
+            color: rgb(97, 97, 97); 
+        }
+
+        .ALF {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .INO {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 24px;
+            margin-right: 1000px;
+            margin-left: 300px;
+            text-align: left;
+            color: green;
+        }
+
+        .ITA {
+            font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 18px;
+            margin-right: 1px;
+            margin-left: 150px;
+            text-align: left;
+            color: black; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .round-image {
+            margin-left: 250px;
+            margin-right: 100px;
+            border-radius: 50%;
+            width: 550px; /* Adjust as needed */
+            height: auto;
+        }
+        .icon1{
+         display:flex;
+     width: 100px;
+    height: 100px;
+    margin-left: 350px;
+    margin-top: 400px;
+        }
+        
+        .icon2{
+            width: 100px;
+            height: 100px;
+
+        }
+
+
+        .icon3{
+
+    width: 100px;
+    height: 100px;
+            }
+.icon4{
+    width: 100px;
+    height: 100px;
+    margin-left: 300px;
+    margin-top: 200px;
+
+       }
+    .C{
+        font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 26px;
+            color: green;
+            
+            margin-top: 500px;
+    }
+    .CM{
+        font-family: "Hind", sans-serif;
+            font-style: normal;
+            font-size: 18px;
+            color: black; 
+    }
+    </style>
+</head>
+<body>
+    <div class="nav-items">
+        <img width="150px" height="130px" src="logo.png">
+        <p>Inicio</p>
+        <p>SFCOLAB</p>
+        <p>Projetos</p>
+        <p>Artigos</p>
+        <p>Newsletters</p>
+        <p>Contactos</p>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="colab">
+                    <p>SMART FARM COLAB</p>
+                    <p>O SFCOLAB é uma entidade de hélice quádrupla que reúne empresas privadas, instituições de investigação, universidades e a sociedade, interagindo numa estrutura de conhecimento. Tem como missão o desenvolvimento de soluções digitais inovadoras e serviços, visando ser uma referência da Agricultura Digital em Portugal.</p>
+                    <p>SFCOLAB: Do Oeste de Portugal para o Mundo!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="RTP">
+                    <p>VI Forum Agricultura 4.0</p>
+                    <p>SAVE THE DATE - de 02 de Julho a 04 de Julho</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <div class="agenda">
+        <p>A atuação do SFCOLAB tem sido estruturada no desenvolvimento de soluções digitais customizadas e no fornecimento do suporte técnico especializado para implementação e recomendação das melhores práticas de gestão. Tal decorre por meio do desenvolvimento de serviços de tecnologia, de negócios, por ações pedagógicas como formações e workshops, consultoria e construção de uma rede de network. Esta estratégia assenta em quatro 4 grandes eixos de atuação.</p>
+    </div>
+
+    <div class="PR">
+        <p>PONTO DE PROGRESSO</p>
+        <div class="PR-icons">
+            <img  class="icon1" src="icon_fields.png">
+            <div  class="C">
+            <p>  12 </p>
+        </div>
+        <div  class="CM">
+<p> Culturas Monitorizadas </p>
+        </div>
+            <img  class="icon2" src="icon_locations.png">
+            <div  class="57">
+                <p> 57 </p>
+                </div>
+                <div  class="SI">
+                    <p> Sofis </p>
+                    <p> Instalados </p>
+                </div>
+            <img  class="icon3" src="icon_sensors.png">
+            <div  class="50">
+                <p>  50 </p>
+            </div>
+            <div  class="LD">
+    <p> Localização </p>
+    <p> Diferentes </p>
+            </div>
+            <img  class="icon4" src="icon_sofis.png">
+            <div  class="330">
+                <p>  330 </p>
+            </div>
+            <div  class="ST">
+    <p> Sensores </p>
+    <p> no terreno </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="SR">
+        <p>Os nossos serviços estão a aumentar positivamente e, consequentemente, os resultados em prol de uma agricultura sustentável - hoje e para o futuro!</p>
+    </div>
+
+    <div class="INO">
+        <p>INOVAÇÃO</p>
+    </div>
+    
+    <div class="ITA">
+        <div>
+            <p>Diagnóstico das necessidades do sector;</p>
+            <p>Desenvolver ou adaptar soluções à medida (soluções modulares e customizadas);</p>
+            <p>Resposta assertiva de suporte tecnológico;</p>
+            <p>Soluções inclusivas e de custo acessível;</p>
+            <p>Ecossistema de aplicações baseado em análises de dados e modelos;</p>
+            <p>Apoiar o processo de tomada de decisão;</p>
+            <p>Recomendações e alertas;</p>
+            <p>Interoperabilidade dos dados e plataformas para integração da informação.</p>
+        </div>
+        <img class="round-image" src="terra.png" alt="Imagem Redonda">
+    </div>
+</body>
+</html>
