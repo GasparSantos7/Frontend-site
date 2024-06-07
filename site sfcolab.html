@@ -30,9 +30,20 @@
             margin-right: 100px;
         }
 
+        .nav-items a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-items a:hover {
+            background-color: #f1f1f1;
+        }
+
         .nav-items .dropdown {
             position: relative;
-            display: inline-block;
         }
 
         .nav-items .dropdown-content {
@@ -42,13 +53,13 @@
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1000;
+            border-radius: 5px;
         }
 
         .nav-items .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
             display: block;
+            padding: 10px;
+            text-align: center;
         }
 
         .nav-items .dropdown-content a:hover {
@@ -61,7 +72,7 @@
 
         .agenda {
             font-size: 1em;
-            margin: 200px auto 0 auto;
+            margin: 100px auto 0 auto;
             text-align: justify;
             max-width: 800px;
         }
@@ -79,7 +90,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .swiper-container {
@@ -87,6 +100,9 @@
             max-width: 1200px;
             margin: 0 auto; /* Centralizar o swiper */
             position: relative;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .swiper-slide {
@@ -106,6 +122,9 @@
             z-index: 10;
             cursor: pointer;
             display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            transition: background-color 0.3s;
         }
 
         .swiper-button-prev {
@@ -116,15 +135,22 @@
             right: 10px;
         }
 
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
         .PR {
             font-size: 1.5em;
-            margin: 200px 20px 0 20px;
+            margin: 100px 20px 0 20px;
             color: green;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
             background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .PR-icons {
@@ -145,6 +171,7 @@
         .PR-icons img {
             width: 100px;
             height: 100px;
+            border-radius: 50%;
         }
 
         .icon-container p {
@@ -153,7 +180,7 @@
 
         .SR {
             font-size: 1.2em;
-            margin: 20px 20px 300px 20px;
+            margin: 20px 20px 100px 20px;
             text-align: left;
             color: rgb(97, 97, 97);
         }
@@ -167,13 +194,17 @@
 
         .ITA {
             font-size: 1em;
-            margin: 0 20px 200px 20px;
+            margin: 0 20px 50px 20px;
             text-align: left;
             color: black; 
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #f9f9f9;
         }
 
         .ITA div {
@@ -187,15 +218,17 @@
             width: 450px;
             height: auto;
             margin-left: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <div class="nav-items">
         <img width="150px" height="130px" src="logo.png" alt="Logo">
-        <p>Início</p>
+        <a href="#">Início</a>
         <div class="dropdown">
-            <p>SFCOLAB</p>
+            <a href="#">SFCOLAB</a>
             <div class="dropdown-content">
                 <a href="smartfarm.html">Smart Farm Colab</a>
                 <a href="equipa.html">Equipa</a>
@@ -206,7 +239,7 @@
         </div>
        
         <div class="dropdown">
-            <p>Projetos</p>
+            <a href="#">Projetos</a>
             <div class="dropdown-content">
                 <a href="#">Todos</a>
                 <a href="#">Centro 2020</a>
@@ -220,9 +253,9 @@
                 <a href="#">Sustain Growth</a>
             </div>  
         </div>
-        <p>Artigos</p>
+        <a href="#">Artigos</a>
         <div class="dropdown">
-            <p>Newsletters</p>
+            <a href="#">Newsletters</a>
             <div class="dropdown-content">
                 <a href="#">2024</a>
                 <a href="#">2023</a>
@@ -230,7 +263,7 @@
                 <a href="#">2021</a>
             </div>
         </div>
-        <p>Contactos</p>
+        <a href="#">Contactos</a>
     </div>
 
     <div class="swiper-container">
@@ -299,9 +332,7 @@
         </div>
     </div>
     
-    <div class="SR">
-        <p>Os nossos serviços estão a aumentar positivamente e, consequentemente, os resultados em prol de uma agricultura sustentável - hoje e para o futuro!</p>
-    </div>
+   
 
     <div class="INO">
         <p>INOVAÇÃO</p>
@@ -317,9 +348,9 @@
             <p>Apoiar o processo de tomada de decisão;</p>
             <p>Recomendações e alertas;</p>
             <p>Interoperabilidade dos dados e plataformas para integração da informação.</p>
+            </div>
+            <img class="round-image" src="terra.png" alt="Imagem Redonda">
         </div>
-        <img class="round-image" src="terra.png" alt="Imagem Redonda">
-    </div>
-</body>
-</html>
-
+    </body>
+    </html>
+    
