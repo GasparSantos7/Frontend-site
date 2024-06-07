@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Hind", sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        .container {
+            width: 100%; /* Ocupa toda a largura */
+            background-color: #ffffff; /* Cor de fundo */
+            padding: 20px; /* Adiciona espaço ao redor do conteúdo */
+            display: flex;
+            justify-content: space-between; /* Distribui os itens igualmente */
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-items img {
+            width: 120px;
+            height: auto;
+            position: absolute;
+            left: 20px;
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+
+        .nav-items p {
+            margin: 0;
+            padding: 10px 15px;
+            font-weight: 400;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 20px; /* Tamanho da fonte no cabeçalho */
+        }
+
+        .nav-items p:hover {
+            color: #66c4a6;
+        }
+
+        .dropdown {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 15px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f2f2f2;
+            color: #66c4a6;
+        }
+
+        .dropdown i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo">
+        <div class="nav-items">
+            <div class="dropdown">
+                <p>SFCOLAB <i class="fas fa-chevron-down"></i></p>
+                <div class="dropdown-content">
+                    <a href="smartfarm.html">Smart Farm Colab</a>
+                    <a href="equipa.html">Equipa</a>
+                    <a href="direcao.html">Direcção</a>
+                    <a href="associados.html">Associados</a>
+                    <a href="ODE.html">Ofertas de Emprego</a>
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <p>Projetos <i class="fas fa-chevron-down"></i></p>
+                <div class="dropdown-content">
+                    <a href="#">Todos</a>
+                    <a href="#">Centro 2020</a>
+                    <a href="#">DigiFarm2All</a>
+                    <a href="#">HIBA</a>
+                    <a href="#">HIBA+</a>
+                    <a href="#">Missão Interface </a>
+                    <a href="#">Requalificação de Dois Portos</a>
+                    <a href="#">SFT-EDIH</a>
+                    <a href="#">Smart Farm 4.0</a>
+                    <a href="#">Sustain Growth</a>
+                </div>  
+            </div>
+         
+                <p>Artigos</p>
+              
+            
+            <div class="dropdown">
+                <p>Newsletters <i class="fas fa-chevron-down"></i></p>
+                <div class="dropdown-content">
+                    <a href="#">2024</a>
+                    <a href="#">2023</a>
+                    <a href="#">2022</a>
+                    <a href="#">2021</a>
+                </div>
+            </div>
+            
+            <p>Contactos</p>
+        </div>
+    </div>
+</body>
+</html>

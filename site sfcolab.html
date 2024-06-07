@@ -12,41 +12,63 @@
     <style>
         body {
             font-family: "Hind", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            margin-left: 150px;
-            font-size: 1.7em;
-            text-align: left;
             margin: 0;
             padding: 0;
+            font-size: 1.2em;
         }
 
         .nav-items {
-            display: inline-flex;
+            display: flex;
+            align-items: center;
             gap: 40px;
             padding: 20px;
             background-color: white;
+            position: relative;
         }
 
         .nav-items img {
             margin-right: 100px;
         }
-        
-        .agenda {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 21px;
-            margin: 0;
-            margin-left: 750px;
-            margin-right: 50px;
-            margin-top: 200px;
-            text-align: justify;
+
+        .nav-items .dropdown {
+            position: relative;
+            display: inline-block;
         }
-        
+
+        .nav-items .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .nav-items .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-items .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .nav-items .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .agenda {
+            font-size: 1em;
+            margin: 200px auto 0 auto;
+            text-align: justify;
+            max-width: 800px;
+        }
+
         .colab, .RTP {
-            font-family: Arial, Helvetica, sans-serif;
             color: white;
-            font-size: 23px;
+            font-size: 1.2em;
             padding: 70px 150px;
             text-align: center;
             background-image: url('backg.png');
@@ -57,11 +79,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-top: 100px;
         }
 
         .swiper-container {
             width: 100%;
-            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto; /* Centralizar o swiper */
+            position: relative;
         }
 
         .swiper-slide {
@@ -70,16 +95,33 @@
             align-items: center;
         }
 
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            display: block;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
         .PR {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 25px;
-            margin-left: 120px;
-            margin-top: 200px;
-            text-align: left;
+            font-size: 1.5em;
+            margin: 200px 20px 0 20px;
             color: green;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 20px;
             background-color: white;
@@ -87,112 +129,107 @@
 
         .PR-icons {
             display: flex;
-            gap: 10px;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        .PR-icons i {
-            font-size: 25px;
-            color: green;
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .PR-icons img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .icon-container p {
+            margin: 10px 0 0 0;
         }
 
         .SR {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 20px;
-            margin-right: 900px;
-            margin-left: 140px;
-            margin-bottom: 300px;
+            font-size: 1.2em;
+            margin: 20px 20px 300px 20px;
             text-align: left;
-            color: rgb(97, 97, 97); 
-        }
-
-        .ALF {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 50px;
+            color: rgb(97, 97, 97);
         }
 
         .INO {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 24px;
-            margin-right: 1000px;
-            margin-left: 300px;
-            text-align: left;
+            font-size: 1.5em;
+            margin: 50px auto 20px auto;
+            text-align: center;
             color: green;
         }
 
         .ITA {
-            font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 18px;
-            margin-right: 1px;
-            margin-left: 150px;
+            font-size: 1em;
+            margin: 0 20px 200px 20px;
             text-align: left;
             color: black; 
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .ITA div {
+            flex: 1;
+            min-width: 250px;
+            max-width: 600px;
         }
         
         .round-image {
-            margin-left: 250px;
-            margin-right: 100px;
             border-radius: 50%;
-            width: 550px; /* Adjust as needed */
+            width: 450px;
             height: auto;
+            margin-left: 20px;
         }
-        .icon1{
-         display:flex;
-     width: 100px;
-    height: 100px;
-    margin-left: 350px;
-    margin-top: 400px;
-        }
-        
-        .icon2{
-            width: 100px;
-            height: 100px;
-
-        }
-
-
-        .icon3{
-
-    width: 100px;
-    height: 100px;
-            }
-.icon4{
-    width: 100px;
-    height: 100px;
-    margin-left: 300px;
-    margin-top: 200px;
-
-       }
-    .C{
-        font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 26px;
-            color: green;
-            
-            margin-top: 500px;
-    }
-    .CM{
-        font-family: "Hind", sans-serif;
-            font-style: normal;
-            font-size: 18px;
-            color: black; 
-    }
     </style>
 </head>
 <body>
     <div class="nav-items">
-        <img width="150px" height="130px" src="logo.png">
-        <p>Inicio</p>
-        <p>SFCOLAB</p>
-        <p>Projetos</p>
+        <img width="150px" height="130px" src="logo.png" alt="Logo">
+        <p>Início</p>
+        <div class="dropdown">
+            <p>SFCOLAB</p>
+            <div class="dropdown-content">
+                <a href="smartfarm.html">Smart Farm Colab</a>
+                <a href="equipa.html">Equipa</a>
+                <a href="direcao.html">Direcção</a>
+                <a href="associados.html">Associados</a>
+                <a href="ODE.html">Ofertas de Emprego</a>
+            </div>
+        </div>
+       
+        <div class="dropdown">
+            <p>Projetos</p>
+            <div class="dropdown-content">
+                <a href="#">Todos</a>
+                <a href="#">Centro 2020</a>
+                <a href="#">DigiFarm2All</a>
+                <a href="#">HIBA</a>
+                <a href="#">HIBA+</a>
+                <a href="#">Missão Interface </a>
+                <a href="#">Requalificação de Dois Portos</a>
+                <a href="#">SFT-EDIH</a>
+                <a href="#">Smart Farm 4.0</a>
+                <a href="#">Sustain Growth</a>
+            </div>  
+        </div>
         <p>Artigos</p>
-        <p>Newsletters</p>
+        <div class="dropdown">
+            <p>Newsletters</p>
+            <div class="dropdown-content">
+                <a href="#">2024</a>
+                <a href="#">2023</a>
+                <a href="#">2022</a>
+                <a href="#">2021</a>
+            </div>
+        </div>
         <p>Contactos</p>
     </div>
 
@@ -233,42 +270,31 @@
     </script>
 
     <div class="agenda">
-        <p>A atuação do SFCOLAB tem sido estruturada no desenvolvimento de soluções digitais customizadas e no fornecimento do suporte técnico especializado para implementação e recomendação das melhores práticas de gestão. Tal decorre por meio do desenvolvimento de serviços de tecnologia, de negócios, por ações pedagógicas como formações e workshops, consultoria e construção de uma rede de network. Esta estratégia assenta em quatro 4 grandes eixos de atuação.</p>
+        <p>A atuação do SFCOLAB tem sido estruturada no desenvolvimento de soluções digitais customizadas e no fornecimento do suporte técnico especializado para implementação e recomendação das melhores práticas de gestão. Tal decorre por meio do desenvolvimento de serviços de tecnologia, de negócios, por ações pedagógicas como formações e workshops, consultoria e construção de uma rede de network. Esta estratégia assenta em quatro grandes eixos de atuação.</p>
     </div>
 
     <div class="PR">
         <p>PONTO DE PROGRESSO</p>
         <div class="PR-icons">
-            <img  class="icon1" src="icon_fields.png">
-            <div  class="C">
-            <p>  12 </p>
-        </div>
-        <div  class="CM">
-<p> Culturas Monitorizadas </p>
-        </div>
-            <img  class="icon2" src="icon_locations.png">
-            <div  class="57">
-                <p> 57 </p>
-                </div>
-                <div  class="SI">
-                    <p> Sofis </p>
-                    <p> Instalados </p>
-                </div>
-            <img  class="icon3" src="icon_sensors.png">
-            <div  class="50">
-                <p>  50 </p>
+            <div class="icon-container">
+                <img src="icon_fields.png" alt="Icon Fields">
+                <p>12</p>
+                <p>Culturas Monitorizadas</p>
             </div>
-            <div  class="LD">
-    <p> Localização </p>
-    <p> Diferentes </p>
+            <div class="icon-container">
+                <img src="icon_locations.png" alt="Icon Locations">
+                <p>57</p>
+                <p>Sofis Instalados</p>
             </div>
-            <img  class="icon4" src="icon_sofis.png">
-            <div  class="330">
-                <p>  330 </p>
+            <div class="icon-container">
+                <img src="icon_sensors.png" alt="Icon Sensors">
+                <p>50</p>
+                <p>Localizações Diferentes</p>
             </div>
-            <div  class="ST">
-    <p> Sensores </p>
-    <p> no terreno </p>
+            <div class="icon-container">
+                <img src="icon_sofis.png" alt="Icon Sofis">
+                <p>330</p>
+                <p>Sensores no terreno</p>
             </div>
         </div>
     </div>
@@ -296,3 +322,4 @@
     </div>
 </body>
 </html>
+
