@@ -1,0 +1,182 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hind", sans-serif;
+    color: #444;
+    background-color: #f1eeee41;
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 40px; /* Aumenta o espaçamento interno */
+    background-color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para o relevo */
+}
+
+.nav-items img {
+    width: 150px; /* Aumenta o tamanho das imagens */
+    height: auto;
+    margin-right: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+    padding: 15px 20px; /* Aumenta o espaçamento interno */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9em; /* Reduz o tamanho da fonte */
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown {
+    position: relative;
+}
+
+.nav-items .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-items .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-items .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para o conteúdo principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 70%; /* Ajuste a largura conforme necessário */
+}
+
+.image-top {
+    display: flex;
+    justify-content: center;
+}
+
+.image-top img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.text {
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text p {
+    margin-bottom: 15px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 15px 20px 10px 0;
+    padding: 12px 24px;
+    background-color: #0b580b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #084408;
+}
+
+.image-side {
+    flex: 1 1 70%; /* Aumenta a largura da image-side */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px; /* Ajuste a altura para ser igual à largura */
+    width: 700px; /* Mantém a largura igual à altura para formar um quadrado */
+    overflow: hidden; /* Evita que a imagem ultrapasse os limites do contêiner */
+}
+
+.image-side img {
+    width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content, .image-side {
+        flex: 1 1 100%;
+    }
+
+    .text {
+        align-items: flex-start;
+    }
+
+    .image-side {
+        justify-content: flex-start;
+        height: 400px; /* Ajusta a altura para a visualização em dispositivos móveis */
+    }
+
+    .image-side img {
+        margin-left: 0;
+    }
+}

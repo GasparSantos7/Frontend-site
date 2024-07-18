@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro 2020 - SFCOLAB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Hind", sans-serif;
+            color: #444;
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+            background-color: white;
+            position: relative;
+        }
+
+        .nav-items img {
+            width: 130px; 
+            height: 120px; 
+            margin-right: 20px; 
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-items a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .nav-items .dropdown {
+            position: relative;
+        }
+
+        .nav-items .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .nav-items .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-items .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .nav-items .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Estilos adicionais do seu programa */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77ab59 3px solid;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            display: inline;
+            padding: 0 20px 0 0;
+        }
+
+        .main {
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .image-text-container {
+            background-image: url('backg1.png');
+            background-size: cover;
+            width: 100vw;
+            height: 600px;
+            background-position: center;
+            color: white;
+            padding: 40px;
+            position: relative;
+            text-align: right;
+            box-sizing: border-box;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .image-text-container .text {
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: 0;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .image-text-container .buttons {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            text-align: right;
+        }
+
+        .image-text-container .buttons a {
+            background-color: #57ec00;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: auto;
+            font-size: 18px; 
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="submit"] {
+            background: #333;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background: #555;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.5); /* Ajusta o tamanho dos checkboxes */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-items">
+        <img src="logo.png" alt="Logo da SFCOLAB">
+        <a href="site sfcolab.html">Início</a>
+        <div class="dropdown">
+            <a href="#">SFCOLAB</a>
+            <div class="dropdown-content">
+                <a href="smartfarm.html">Smart Farm Colab</a>
+                <a href="equipa.html">Equipa</a>
+                <a href="direcao.html">Direção</a>
+                <a href="associados.html">Associados</a>
+                <a href="ODE.html">Ofertas de Emprego</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#">Projetos</a>
+            <div class="dropdown-content">
+                <a href="todos.html">Todos</a>
+                <a href="centro2020.html">Centro 2020</a>
+                <a href="digifarm.html">DigiFarm2All</a>
+                <a href="hiba.html">HIBA</a>
+                <a href="#">HIBA+</a>
+                <a href="#">Missão Interface</a>
+                <a href="#">Requalificação de Dois Portos</a>
+                <a href="#">SFT-EDIH</a>
+                <a href="#">Smart Farm 4.0</a>
+                <a href="#">Sustain Growth</a>
+            </div>  
+        </div>
+
+        <a href="#">Artigos</a>
+        <div class="dropdown">
+            <a href="#">Newsletters</a>
+            <div class="dropdown-content">
+                <a href="#">2024</a>
+                <a href="#">2023</a>
+                <a href="#">2022</a>
+                <a href="#">2021</a>
+            </div>
+        </div>
+
+        <a href="#">Contactos</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>VI Fórum Agricultura 4.0</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#inscricao">Inscrição</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="image-text-container">
+            <div class="text">
+                <h2>VI Fórum Agricultura 4.0</h2>
+                <p>VI Fórum Agricultura 4.0 - de 02 julho a 04 de julho</p>
+                <p><strong>02 de julho</strong><br>Auditório da Feira de São Pedro de Torres Vedras</p>
+                <p><strong>03 de julho</strong><br>Adega Cooperativa de São Mamede da Ventosa (Torres Vedras)</p>
+                <p><strong>04 de julho</strong><br>OBITEC - Óbidos</p>
+            </div>
+            <div class="buttons">
+                <a href="C:\Users\Utilizador\3D Objects\site\SFCOLAB Website\Documentos\Programa VI Forum Agricultura 4.0.pdf"><i class="fa-solid fa-file"></i> | Programa VI Forum Agricultura 4.0</a>
+                <a href="C:\Users\Utilizador\3D Objects\site\SFCOLAB Website\Documentos\Programa Scale-up Agrifood 2024 HIBA+.pdf"><i class="fa-solid fa-file"></i> | Programa Scale-up Agrifood 2024 HIBA+</a>
+                <a href="C:\Users\Utilizador\3D Objects\site\SFCOLAB Website\Documentos\Listas Participantes_VI Fórum_Agricultura 4.0.xlsx"><i class="fa-solid fa-file"></i> | Lista Participantes</a>
+                <a href="C:\Users\Utilizador\3D Objects\site\SFCOLAB Website\Documentos\Inovação e transformação digital na agricultura - 4.0 2024.xlsx"><i class="fa-solid fa-file"></i> | Fórum</a>
+                <a href="C:\Users\Utilizador\3D Objects\site\SFCOLAB Website\Documentos\Video Pitch_HIBA.pdf"><i class="fa-solid fa-file"></i> | Video Pitch</a>
+            </div>
+        </div>
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre o Evento</h2>
+                <p>O VI Fórum Agricultura 4.0 é um evento organizado pela SFCOLAB que visa reunir especialistas e profissionais do setor agrícola para discutir e explorar as inovações e transformações digitais na agricultura. O evento será realizado em três locais diferentes ao longo de três dias, oferecendo uma oportunidade única para aprender, conectar e colaborar.</p>
+            </div>
+        </section>
+        <section id="agenda">
+            <div class="container">
+                <h2>Agenda</h2>
+                <p><strong>02 de julho - Auditório da Feira de São Pedro de Torres Vedras</strong><br>
+                09:00 - Abertura<br>
+                10:00 - Palestra: Inovações em Agricultura 4.0<br>
+                12:30 - Almoço<br>
+                14:00 - Mesa Redonda: Desafios e Oportunidades da Agricultura Digital<br>
+                16:30 - Encerramento</p>
+
+                <p><strong>03 de julho - Adega Cooperativa de São Mamede da Ventosa (Torres Vedras)</strong><br>
+                09:30 - Workshop: Tecnologias Emergentes para Agricultura Sustentável<br>
+                12:00 - Visita Técnica<br>
+                14:30 - Apresentação de Casos de Sucesso<br>
+                17:00 - Encerramento</p>
+
+                <p><strong>04 de julho - OBITEC - Óbidos</strong><br>
+                10:00 - Debate: Futuro da Agricultura 4.0 e Sustentabilidade<br>
+                12:30 - Almoço<br>
+                14:00 - Workshops Paralelos: Transformação Digital na Prática<br>
+                16:30 - Encerramento</p>
+            </div>
+        </section>
+        <section id="inscricao">
+            <div class="container">
+                <h2>Inscrição</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="confirmacao" required>
+                            Concordo com os termos e condições
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

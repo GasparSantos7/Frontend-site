@@ -1,0 +1,206 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do documento */
+body {
+    font-family: "Hind", sans-serif;
+    color: #444;
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionando sombra ao cabeçalho */
+    padding: 20px; /* Adicionando padding para melhor aparência */
+    background-color: white; /* Garantir que o cabeçalho tenha uma cor de fundo */
+    margin-bottom: 20px; /* Adicionando espaçamento abaixo do cabeçalho */
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sub-cabeçalho */
+.sub-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sub-header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Conteúdo */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.text {
+    padding: 15px; 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+}
+
+.text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Imagem */
+.image {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 80%;
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 12px 24px;
+    background-color: #0b580b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #084408;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .text {
+        padding: 20px;
+    }
+}
+
+
+
+/* Início do cabeçalho */
+/* Navegação */
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajustei a opacidade da sombra */
+}
+
+.nav-items img {
+    margin-right: 20px; /* Reduzi a margem direita da imagem */
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-items a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown {
+    position: relative;
+}
+
+.nav-items .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-items .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-items .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Sub-cabeçalho adicional */
+.sub-header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sub-header p {
+    color: #0b580b;
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Imagem específica */
+.omage {
+    max-width: 300px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.omage img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}

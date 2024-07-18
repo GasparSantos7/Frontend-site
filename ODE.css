@@ -1,0 +1,125 @@
+body {
+    font-family: "Hind", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+/* Início do cabeçalho */
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-items img {
+    margin-right: 100px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-items a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown {
+    position: relative;
+}
+
+.nav-items .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-items .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-items .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-items .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    padding: 0; 
+    margin: 0; 
+}
+
+.text {
+    margin-top: 6%;
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.text h1 {
+font-size: 52px;
+color: rgb(38, 71, 38);
+
+}
+.text p
+{
+font-size: 21px;
+color:grey;
+}
+.image-container {
+    width: 60%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Botão */
+.apply-button {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
+    align-items: center; /* Centraliza verticalmente o conteúdo do botão */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 30%; /* Ajuste necessário apenas se desejar mover o botão horizontalmente */
+}
+
+.apply-button i {
+    margin-right: 10px;
+}
+
+.apply-button:hover {
+    background-color: #45a049;
+}
